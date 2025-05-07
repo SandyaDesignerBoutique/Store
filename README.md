@@ -1,5 +1,6 @@
 # Sandhya Rani Mangalampally
-Founder & Head Designer at Sandya Designer Boutique
+Founder & Head Designer at Sandya Designer Boutique.
+
 An entrepreneur and fashion designer specializing in traditional Indian ethnic wear.
 
 ## ✨ Welcome to Sandya Designer Boutique! ✨
