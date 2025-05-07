@@ -18,9 +18,9 @@
       <img src="https://i.postimg.cc/3RFXPTmr/Founder.jpg" alt="Sandhya Rani Mangalampally">
       <div class="about-text">
         <h3>Sandhya Rani Mangalampally</h3>
-        <p><strong>Founder & Head Designer at Sandya Designer Boutique</strong></p>
-        <p>An entrepreneur and fashion designer specializing in traditional Indian ethnic wear.</p>
-        <p>At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses, elegant long frocks, western wear, kids wear and vast collection of sarees, our boutique celebrates craftsmanship and creativity. Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
+        <p><strong>An Entrepreneur & Head Designer at Sandya Designer Boutique</strong></p>
+        <p>At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
+        <p>Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
         <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener">Find Us Here!</a>
       </div>
     </div>
@@ -39,18 +39,30 @@
   <section class="contact-us">
     <h2>Contact Us</h2>
     <p>We would love to hear from you! Reach out to us for inquiries, orders, or collaborations.</p>
-    <form action="#" method="post">
+    <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
+      <!-- Formsubmit configuration -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="hidden-field" title="Leave this field empty">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/store/thankyou.html">
+    
+      <!-- User inputs -->
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      
-      <button type="submit" class="button">Send Message</button>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+    
+      <div class="button-container">
+        <button type="submit" class="button">Send Message</button>
+        <span class="or-text">or</span>
+        <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener">Find Us Here!</a>
+      </div>
     </form>
+    
   </section>
 
   <footer>
