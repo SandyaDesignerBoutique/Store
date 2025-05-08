@@ -197,6 +197,17 @@ footer a {
     max-width: 90%;
   }
 
+  .about-text h3 {
+    font-size: 1.2rem; /* Reduce font size for better readability */
+    text-align: center; /* Center-align the name */
+    line-height: 1.4; /* Adjust line height for better spacing */
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Adjust paragraph font size for consistency */
+    text-align: center; /* Center-align the text */
+  }
+
   .about-us {
     padding: 1rem;
   }
