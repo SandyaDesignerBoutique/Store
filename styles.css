@@ -55,8 +55,10 @@ header h1 {
 }
 
 .about-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  text-align: justify; /* Justifies the paragraph text */
+  font-size: 1rem; /* Ensures consistent font size */
+  line-height: 1.6; /* Improves readability */
+  margin-bottom: 1rem; /* Adds spacing between paragraphs */
 }
 
 .saree-collection {
