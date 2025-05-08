@@ -61,6 +61,18 @@ header h1 {
   margin-bottom: 1rem; /* Adds spacing between paragraphs */
 }
 
+.about-text .justified-text {
+  text-align: justify; /* Justifies the paragraph text */
+  font-size: 1rem; /* Ensures consistent font size */
+  line-height: 1.6; /* Improves readability */
+  margin-bottom: 1rem; /* Adds spacing between paragraphs */
+}
+
+.about-text .highlight {
+  text-align: center; /* Keeps the highlighted line centered */
+  font-weight: bold; /* Ensures it stands out */
+}
+
 .saree-collection {
   padding: 2rem;
   text-align: center;
@@ -200,9 +212,9 @@ footer a {
   }
 
   .about-text h3 {
-    font-size: 1.2rem; /* Reduce font size for better readability */
+    font-size: 1.3rem; /* Reduce font size for better readability */
     text-align: center; /* Center-align the name */
-    line-height: 1.4; /* Adjust line height for better spacing */
+    line-height: 1; /* Adjust line height for better spacing */
   }
 
   .about-text p {
