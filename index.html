@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sandya Designer Boutique</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <h1>SANDYA DESIGNER BOUTIQUE</h1>
+    <div class="header-content">
+      <img src="https://i.postimg.cc/BvvZxHj3/left.png" alt="Lehenga Left" class="header-image left-image">
+      <h1>SANDHYA DESIGNER BOUTIQUE</h1>
+      <img src="https://i.postimg.cc/gcXLZFhJ/right1.png" alt="Lehenga Right" class="header-image right-image">
+    </div>
   </header>
 
   <section class="about-us">
@@ -19,7 +24,7 @@
       <div class="about-text">
         <h3>Sandhya Rani Mangalampally</h3>
         <p><span class="highlight">An Entrepreneur & Head Designer</span></p>
-        <p class="justified-text">At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
+        <p class="justified-text">At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses and lehengas, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
         <p class="justified-text">Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
         <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener">Find Us Here!</a>
       </div>
@@ -65,9 +70,42 @@
     
   </section>
 
+  <section class="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review-form">
+    <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
+      <!-- FormSubmit configuration -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/Store/thankyou.html">
+
+      <!-- User inputs -->
+      <label for="name">Name:</label>
+      <input type="text" id="reviewerName" name="name" placeholder="Enter your name" required>
+
+      <label for="review">Review:</label>
+      <textarea id="reviewText" name="review" rows="4" placeholder="Write your review here..." required></textarea>
+
+      <button type="submit" class="button">Submit Review</button>
+    </form>
+  </div>
+
+  <div class="review-list">
+    <h3>What Our Customers Say</h3>
+    <ul id="reviewsContainer">
+      <li>
+        <strong>Kireeti Sourabh M</strong>
+        <p>My Mom, Sandhya Rani Mangalampally, pours love into every design—be it a bridal maggam blouse or a kid’s custom outfit. Each piece reflects her passion, attention to detail, and the joy of making someone feel special. It's not just fashion—it’s about celebrating identity and cherished moments. We'd love for you to be part of this journey!</p>
+        <p>Thank You😊!</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
   <footer>
     &copy; 2025 Sandya Designer Boutique. All rights reserved. | <a href="mailto:sandyadesignerboutique@gmail.com">info@sandyadesignerboutique.com</a>
   </footer>
 
+  <script src="scripts.js"></script>
 </body>
 </html>
