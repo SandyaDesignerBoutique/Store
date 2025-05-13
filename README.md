@@ -4,15 +4,14 @@ An entrepreneur & Head Designer at Sandya Designer Boutique specializing in trad
 
 # Welcome to ✨SANDYA DESIGNER BOUTIQUE✨
 
-## Visit our 🌐Online Store: 
-https://sandyadesignerboutique.github.io/Store/
+## Visit our 🌐Online Store: https://sandyadesignerboutique.github.io/Store/
+
+### Find Us Here: 
+https://linktr.ee/sandyadesignerboutique
 
 At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom lehengas and pattern blouses, elegant long frocks, western wear, kids wear and vast collection of sarees, our boutique celebrates craftsmanship and creativity. 
 
 Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.
-
-### Find Us Here: 
-https://linktr.ee/sandyadesignerboutique
 
 ## Follow us on Instagram for the latest lehengas, sarees, and more! 🧵👗💫
 
