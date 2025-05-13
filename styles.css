@@ -297,7 +297,7 @@ footer a {
 
 @media (max-width: 768px) {
   header {
-    padding: 5rem 1rem; /* Reduce padding for mobile view */
+    padding: 2.6rem 2rem; /* Reduce padding for mobile view */
   }
 
   .header-content {
@@ -310,7 +310,7 @@ footer a {
   }
 
   header h1 {
-    font-size: 2rem; /* Adjust font size for mobile */
+    font-size: 2.5rem; /* Adjust font size for mobile */
   }
 
   .left-image {
@@ -337,7 +337,7 @@ footer a {
 
   .about-text h3 {
     margin-top: 0rem; /* Remove top margin for mobile */
-    font-size: 1.3rem; /* Adjust font size for mobile */
+    font-size: 1.2rem; /* Adjust font size for mobile */
     text-align: center; /* Center-align the name */
   }
 
