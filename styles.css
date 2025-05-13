@@ -55,14 +55,14 @@ header h1 {
 }
 
 .about-us {
-  padding: 2rem;
+  padding: 0.3rem;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .about-us h2 {
   font-size: 2rem;
-  margin-top: 0rem; /* Remove top margin for better alignment */
+  margin-top: 1rem; /* Remove top margin for better alignment */
   margin-bottom: 1rem;
 }
 
@@ -72,7 +72,7 @@ header h1 {
   justify-content: center;
   gap: 20px;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 950px;
 }
 
 .about-content img {
@@ -107,7 +107,7 @@ header h1 {
 }
 
 .saree-collection {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -120,16 +120,16 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .contact-us {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -154,7 +154,7 @@ header h1 {
 .contact-us input,
 .contact-us textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -241,7 +241,7 @@ footer a {
 }
 
 .reviews {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -328,7 +328,7 @@ footer a {
 
   .about-content img {
     margin-bottom: 0rem; /* Add spacing below the image */
-    max-width: 70%; /* Make the image responsive */
+    max-width: 50%; /* Make the image responsive */
   }
 
   .about-text {
@@ -347,5 +347,45 @@ footer a {
 
   .about-text .justified-text {
     text-align: justify; /* Justify only the big paragraphs */
+  }
+
+  .contact-us form {
+    padding: 0 1rem; /* Add padding to create equal gaps on both sides */
+  }
+
+  .contact-us input,
+  .contact-us textarea {
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+
+  .review-form {
+    padding: 0 1rem; /* Add padding to create equal gaps on both sides */
+  }
+
+  .review-form input,
+  .review-form textarea {
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increase the minimum size of images */
+    gap: 0.5rem; /* Reduce the gap between images */
+    padding: 0; /* Remove padding to bring images closer to the edges */
+  }
+
+  .gallery img {
+    width: 100%; /* Ensure images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Keep the rounded corners */
+  }
+
+  .about-us h2,
+  .saree-collection h2,
+  .contact-us h2,
+  .reviews h2,
+  .review-list h3 {
+    font-size: 1.5rem; /* Decrease font size for mobile view */
   }
 }
