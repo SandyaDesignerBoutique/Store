@@ -22,4 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("lightbox-active");
     }
   });
+
+  // Close lightbox when clicking the close button
+  const closeBtn = document.querySelector('.lightbox-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      document.body.classList.remove('lightbox-active');
+    });
+  }
 });

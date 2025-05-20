@@ -124,8 +124,16 @@ header h1 {
 }
 
 .gallery img {
+  max-width: 400px;
   width: 100%;
-  border-radius: 5px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .contact-us {
@@ -230,6 +238,17 @@ footer a {
   cursor: pointer;
 }
 
+.button:hover,
+.contact-us button:hover {
+  background-color: #87ceeb;
+  color: #222;
+}
+
+.button:active {
+  transform: scale(0.97);
+  background-color: #6ec6e6;
+}
+
 .or-text {
   font-size: 1rem;
   font-weight: bold;
@@ -287,12 +306,12 @@ footer a {
 }
 
 .review-list li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  text-align: left;
+  background: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 1.2em;
+  padding: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  text-align: left; /* Add this line */
 }
 
 .lightbox {
@@ -333,6 +352,18 @@ body.lightbox-active {
 /* Remove blur from the lightbox image */
 body.lightbox-active #lightbox-image {
   filter: none; /* Ensure the image is not blurred */
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -431,6 +462,6 @@ body.lightbox-active #lightbox-image {
 }
 
 button:focus, input:focus, textarea:focus {
-  outline: 2px solid #ADD8E6;
+  outline: 2px solid #87ceeb;
   outline-offset: 2px;
 }
