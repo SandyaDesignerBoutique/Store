@@ -429,3 +429,8 @@ body.lightbox-active #lightbox-image {
     font-size: 1.5rem; /* Decrease font size for mobile view */
   }
 }
+
+button:focus, input:focus, textarea:focus {
+  outline: 2px solid #ADD8E6;
+  outline-offset: 2px;
+}
