@@ -1,3 +1,19 @@
+// Light/Dark mode toggle logic
+const btn = document.getElementById('toggleModeBtn');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedMode = localStorage.getItem('themeMode');
+if (savedMode === 'dark' || (!savedMode && prefersDark)) {
+  document.body.classList.add('dark-mode');
+  btn.textContent = '☀️';
+}
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  btn.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+});
+
+// Lightbox gallery logic
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = document.querySelectorAll(".gallery img");
   const lightbox = document.getElementById("lightbox");

@@ -1,128 +1,85 @@
 body {
-  font-family: 'Roboto', sans-serif; /* Applies Roboto for body text */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff8f0;
   color: #333;
 }
-
-/* Apply Roboto Mono for headings */
-h1, h2, h3 {
-  font-family: 'Roboto Mono', monospace;
-}
-
+h1, h2, h3 { font-family: 'Roboto Mono', monospace; }
 header {
   background-color: #ADD8E6;
   color: #333;
-  padding: 10rem 0; /* Remove horizontal padding to align images to edges */
+  padding: 10rem 0;
   text-align: center;
-  position: relative; /* Allows positioning of images */
+  position: relative;
 }
-
 .header-content {
   display: flex;
-  align-items: center; /* Vertically align images and heading */
-  justify-content: center; /* Center the heading */
-  gap: 20px; /* Space between the heading and images */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-
 .header-image {
-  position: absolute; /* Position images relative to the header */
-  top: 50%; /* Vertically center the images */
-  transform: translateY(-50%); /* Adjust for perfect vertical alignment */
-  max-width: 200px; /* Resize the images */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 200px;
   height: auto;
 }
-
-.left-image {
-  left: 0; /* Align the left image to the left edge of the screen */
-  max-width: 200px; /* Decrease the size of the left image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.right-image {
-  right: 0; /* Align the right image to the right edge of the screen */
-  max-width: 183px; /* Decrease the size of the right image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-header h1 {
-  margin: 0;
-  font-size: 4rem;
-  font-family: 'Roboto Mono', monospace;
-  text-align: center;
-  z-index: 1; /* Ensure the heading stays above the images */
-}
-
-.about-us {
-  padding: 0.3rem;
+.left-image { left: 0; max-width: 200px; height: auto; }
+.right-image { right: 0; max-width: 183px; height: auto; }
+header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
+.about-us, .contact-us, .reviews {
+  padding: 1rem;
   background-color: #f9f9f9;
   text-align: center;
+  margin: 1rem auto;
 }
-
-.about-us h2 {
-  font-size: 2rem;
-  margin-top: 1rem; /* Remove top margin for better alignment */
-  margin-bottom: 1rem;
+.about-us {
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 96vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
+.saree-collection {
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 96vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .about-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 0 auto;
   max-width: 950px;
+  margin: 0 auto;
 }
-
-.about-content img {
-  max-width: 270px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.about-text {
-  max-width: 1000px; /* Increase the width of the text container */
-  margin: 0 auto; /* Center the text container */
-  text-align: justify;
-}
-
-.about-text h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-text p {
-  max-width: 1000px; /* Increase the width of the paragraph */
-  margin: 0 auto; /* Center the paragraph */
-  text-align: justify; /* Keep the paragraphs justified */
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.about-text .highlight {
-  text-align: center; /* Keeps the highlighted line centered */
-  font-weight: bold; /* Ensures it stands out */
-}
-
-.saree-collection {
-  padding: 1rem;
-  text-align: center;
-}
-
-.saree-collection h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
+.about-content img { max-width: 270px; height: auto; border-radius: 10px; }
+.about-text { max-width: 1000px; text-align: left; }
+.about-text h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.about-text p { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; }
+.about-text .highlight { text-align: center; font-weight: bold; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   padding: 1rem;
 }
-
 .gallery img {
   max-width: 400px;
   width: 100%;
@@ -131,91 +88,16 @@ header h1 {
   cursor: pointer;
   transition: transform 0.2s;
 }
-.gallery img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.gallery img:hover { transform: scale(1.04); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.contact-us form, .review-form { max-width: 600px; margin: auto; text-align: left; }
+.contact-us label, .review-form label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.contact-us input, .contact-us textarea, .review-form input, .review-form textarea {
+  width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px;
+  font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: #333;
 }
-
-.contact-us {
-  padding: 1rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.contact-us h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact-us form {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.contact-us label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contact-us input,
-.contact-us textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Apply the same font to input and textarea placeholders */
-input, textarea {
-  font-family: 'Roboto Mono', monospace; /* Use the same font as the rest of the site */
-  font-size: 0.8rem; /* Ensure consistent font size */
-  color: #333; /* Match the text color */
-}
-
 input::placeholder, textarea::placeholder {
-  font-family: 'Roboto Mono', monospace; /* Apply the font to placeholders */
-  font-size: 0.8rem; /* Ensure consistent font size for placeholders */
-  color: #aaa; /* Use a lighter color for placeholders */
+  font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: #aaa;
 }
-
-.contact-us button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ADD8E6;
-  color: #333;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.contact-us .find-us {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ADD8E6;
-  color: #333;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
-}
-
-footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #0000EE;
-  text-decoration: none;
-}
-
 .button-container {
   display: flex;
   align-items: center;
@@ -223,254 +105,310 @@ footer a {
   gap: 10px;
   margin-top: 1rem;
 }
-
-.button {
-  display: inline-block;
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ADD8E6;
-  color: #333;
+/* Unified button style for both Send Message and Find Us Here! */
+.button,
+.contact-us .button,
+.contact-us a.button {
+  min-width: 140px;      /* Reduced width */
+  max-width: 140px;      /* Fixed width for all buttons */
+  width: 140px;          /* Ensures all buttons are the same size */
+  text-align: center;
+  font-size: 1.05rem;
+  padding: 0.6rem 0.5rem;
+  background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
+  color: #222;
   text-decoration: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: bold;
-  text-align: center;
-  cursor: pointer;
+  font-family: 'Roboto', 'Roboto Mono', monospace, Arial, sans-serif;
+  box-shadow: 0 2px 8px 0 rgba(163,217,236,0.08);
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  display: inline-block;
+  white-space: normal;
 }
-
 .button:hover,
-.contact-us button:hover {
-  background-color: #87ceeb;
-  color: #222;
+.contact-us .button:hover,
+.contact-us a.button:hover {
+  background: linear-gradient(90deg, #7EC8E3 0%, #A3D9EC 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px 0 rgba(126,200,227,0.18);
 }
-
-.button:active {
+.button:active,
+.contact-us .button:active,
+.contact-us a.button:active {
   transform: scale(0.97);
-  background-color: #6ec6e6;
+  background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
+}
+.or-text { 
+  font-size: 1rem; 
+  font-weight: bold; 
+  color: #333; 
 }
 
-.or-text {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
+body.dark-mode .or-text {
+  color: #fafafa; /* Much darker, blends with dark background */
 }
-
-.hidden-field {
-  display: none;
-}
-
-.reviews {
-  padding: 1rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.reviews h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.review-form {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.review-form input,
-.review-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.review-list {
-  margin-top: 2rem;
-}
-
-.review-list h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.review-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Limit review-list width and center it on desktop only */
+.hidden-field { display: none; }
+.reviews h2 { font-size: 2rem; margin-bottom: 1rem; }
+.review-list { margin-top: 2rem; }
+.review-list h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.review-list ul { list-style: none; padding: 0; }
 @media (min-width: 769px) {
-  .review-list ul {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .review-list ul { max-width: 750px; margin-left: auto; margin-right: auto; }
 }
-
 .review-list li {
   background: #fafafa;
   border-radius: 8px;
   margin-bottom: 1.2em;
   padding: 1em;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  text-align: left; /* Add this line */
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.721);
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.08em;
 }
-
-.lightbox {
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+footer a { color: #0000EE; text-decoration: none; }
+.toggle-mode-btn {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.lightbox img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-}
-
-.hidden {
-  display: none; /* Hide the lightbox by default */
-}
-
-body.lightbox-active {
-  overflow: hidden; /* Prevent scrolling when lightbox is active */
-}
-
-/* Remove blur from the lightbox image */
-body.lightbox-active #lightbox-image {
-  filter: none; /* Ensure the image is not blurred */
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   cursor: pointer;
-  z-index: 10;
+  font-size: 1.5em;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+/* --- DARK MODE --- */
+body.dark-mode {
+  background: #181818;
+  color: #f3f3f3;
+}
+body.dark-mode .about-us,
+body.dark-mode .saree-collection,
+body.dark-mode .contact-us,
+body.dark-mode .reviews {
+  background: #232323;
+  color: #f3f3f3;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #222;
+  color: #f3f3f3;
+  border: 1px solid #444;
+}
+body.dark-mode .button,
+body.dark-mode .contact-us .button,
+body.dark-mode .contact-us a.button {
+  background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
+  color: #222;
+}
+body.dark-mode .toggle-mode-btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark-mode .review-list,
+body.dark-mode footer {
+  background: #232323;
+  color: #f3f3f3;
+}
+body.dark-mode .review-list li {
+  background: #1E1E1E !important; /* Only chaxnges the fill in dark mode */
+  color: #f3f3f3;
+}
+body.dark-mode .review-list ul,
+body.dark-mode .review-list li {
+  background: transparent;
+  color: inherit;
+  line-height: 1.8;
+}
+body.dark-mode footer a {
+  color: #f3f3f3;
+  text-decoration: underline;
+}
+/* Make all main section headings the same size */
+.about-us h2,
+.saree-collection h2,
+.contact-us h2,
+.reviews h2,
+.review-list h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 
+/* Responsive: smaller headings on mobile */
 @media (max-width: 768px) {
-  header {
-    padding: 2.6rem 2rem; /* Reduce padding for mobile view */
-  }
-
-  .header-content {
-    flex-direction: column; /* Stack images and heading vertically */
-    gap: 10px; /* Reduce gap for smaller screens */
-  }
-
-  .header-image {
-    max-width: 120px; /* Resize images for smaller screens */
-  }
-
-  header h1 {
-    font-size: 2.5rem; /* Adjust font size for mobile */
-  }
-
-  .left-image {
-    max-width: 118px; /* Further reduce size for mobile */
-  }
-
-  .right-image {
-    max-width: 110px; /* Further reduce size for mobile */
-  }
-
-  .about-content {
-    flex-direction: column; /* Stack the image and text vertically */
-    text-align: center; /* Center-align content for mobile view */
-  }
-
-  .about-content img {
-    margin-bottom: 0rem; /* Add spacing below the image */
-    max-width: 50%; /* Make the image responsive */
-  }
-
-  .about-text {
-    text-align: justify; /* Keep text justified */
-  }
-
-  .about-text h3 {
-    margin-top: 0rem; /* Remove top margin for mobile */
-    font-size: 1.2rem; /* Adjust font size for mobile */
-    text-align: center; /* Center-align the name */
-  }
-
-  .about-text p {
-    text-align: center; /* Default alignment for all paragraphs */
-  }
-
-  .about-text .justified-text {
-    text-align: justify; /* Justify only the big paragraphs */
-  }
-
-  .contact-us form {
-    padding: 0 1rem; /* Add padding to create equal gaps on both sides */
-  }
-
-  .contact-us input,
-  .contact-us textarea {
-    width: 100%; /* Ensure inputs take full width */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-  }
-
-  .review-form {
-    padding: 0 1rem; /* Add padding to create equal gaps on both sides */
-  }
-
-  .review-form input,
-  .review-form textarea {
-    width: 100%; /* Ensure inputs take full width */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-  }
-
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increase the minimum size of images */
-    gap: 0.5rem; /* Reduce the gap between images */
-    padding: 0; /* Remove padding to bring images closer to the edges */
-  }
-
-  .gallery img {
-    width: 100%; /* Ensure images take full width of their container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Keep the rounded corners */
-  }
-
   .about-us h2,
   .saree-collection h2,
   .contact-us h2,
   .reviews h2,
   .review-list h3 {
-    font-size: 1.5rem; /* Decrease font size for mobile view */
+    font-size: 1.2rem;
   }
 }
-
+@media (max-width: 768px) {
+  header { padding: 2.6rem 2rem; }
+  .header-content { flex-direction: column; gap: 10px; }
+  .header-image { max-width: 120px; }
+  header h1 { font-size: 2.5rem; }
+  .left-image { max-width: 118px; }
+  .right-image { max-width: 110px; }
+  .about-content { flex-direction: column; text-align: center; }
+  .about-content img { margin-bottom: 0rem; max-width: 50%; }
+  .about-text { text-align: justify; }
+  .about-text h3 { margin-top: 0rem; font-size: 1.2rem; text-align: center; }
+  .about-text p { text-align: center; }
+  .about-text .justified-text { text-align: justify; }
+  .contact-us form, .review-form { padding: 0 1rem; }
+  .contact-us input, .contact-us textarea, .review-form input, .review-form textarea {
+    width: 100%; box-sizing: border-box;
+  }
+  .gallery { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0; }
+  .gallery img { width: 100%; height: auto; border-radius: 5px; }
+  .about-us h2, .saree-collection h2, .contact-us h2, .reviews h2, .review-list h3 { font-size: 1.5rem; }
+}
 button:focus, input:focus, textarea:focus {
   outline: 2px solid #87ceeb;
   outline-offset: 2px;
+}
+
+/* Rounded edges for selected (focused) input and textarea fields */
+input:focus, textarea:focus {
+  border-radius: 12px;
+  outline: 2px solid #87ceeb;
+  outline-offset: 2px;
+}
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+.lightbox-content { position: relative; max-width: 90%; max-height: 90%; }
+.lightbox img { width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 10px; }
+.hidden { display: none; }
+body.lightbox-active { overflow: hidden; }
+body.lightbox-active #lightbox-image { filter: none; }
+.lightbox-close {
+  position: absolute; top: 16px; right: 24px;
+  background: transparent; border: none; font-size: 2rem; color: #fff; cursor: pointer; z-index: 10;
+}
+
+/* Dark mode for About Us box */
+body.dark-mode .about-us {
+  background: #1E1E1E;
+  border: 2px solid #4ec3fa;
+  color: #f3f3f3;
+}
+
+/* Dark mode for Our Saree Collection box */
+body.dark-mode .saree-collection {
+  background: #1E1E1E;
+  border: 2px solid #4ec3fa;
+  color: #f3f3f3;
+}
+
+/* Contact Us box styling */
+.contact-us {
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 96vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark mode for Contact Us box */
+body.dark-mode .contact-us {
+  background: #1E1E1E;
+  border: 2px solid #4ec3fa;
+  color: #f3f3f3;
+}
+
+/* Ensure form inside .contact-us is not affected */
+.contact-us form {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 0;
+}
+
+/* Ensure gallery grid inside .saree-collection is not affected */
+.saree-collection .gallery {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Customer Reviews box styling */
+.reviews {
+  background: #fafafa;
+  border-radius: 24px; /* Increased for more visible rounded corners */
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 96vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark mode for Customer Reviews box */
+body.dark-mode .reviews {
+  background: #1E1E1E;
+  border-radius: 24px; /* Match the light mode */
+  border: 2px solid #4ec3fa;
+  color: #f3f3f3;
+}
+
+/* Ensure review-list inside .reviews is not affected */
+.reviews .review-list {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add space between submit review and what our customer says */
+.review-form {
+  margin-bottom: 2.5rem;
 }
