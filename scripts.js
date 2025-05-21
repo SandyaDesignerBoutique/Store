@@ -11,6 +11,7 @@ btn.addEventListener('click', () => {
   const isDark = document.body.classList.contains('dark-mode');
   btn.textContent = isDark ? '☀️' : '🌙';
   localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+  btn.blur(); // Remove focus after click
 });
 
 // Lightbox gallery logic

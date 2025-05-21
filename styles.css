@@ -4,10 +4,13 @@ body {
   padding: 0;
   background-color: #fff8f0;
   color: #333;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
 }
 h1, h2, h3 { font-family: 'Roboto Mono', monospace; }
 header {
-  background-color: #ADD8E6;
+  background: #ADD8E6;
   color: #333;
   padding: 10rem 0;
   text-align: center;
@@ -26,41 +29,26 @@ header {
   max-width: 200px;
   height: auto;
 }
-.left-image { left: 0; max-width: 200px; height: auto; }
-.right-image { right: 0; max-width: 183px; height: auto; }
+.left-image { left: 0; }
+.right-image { right: 0; max-width: 183px; }
 header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
-.about-us, .contact-us, .reviews {
-  padding: 1rem;
-  background-color: #f9f9f9;
+
+.about-us, .contact-us, .reviews, .saree-collection {
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 96vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 1rem auto;
+  box-sizing: border-box;
 }
-.about-us {
-  background: #fafafa;
-  border-radius: 16px;
-  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
-  border: 2px solid #b3e6ff;
-  max-width: 96vw;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.saree-collection {
-  background: #fafafa;
-  border-radius: 16px;
-  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
-  border: 2px solid #b3e6ff;
-  max-width: 96vw;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .about-content {
   display: flex;
   align-items: center;
@@ -69,34 +57,54 @@ header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
   max-width: 950px;
   margin: 0 auto;
 }
-.about-content img { max-width: 270px; height: auto; border-radius: 10px; }
+.about-content img { max-width: 270px; border-radius: 10px; }
 .about-text { max-width: 1000px; text-align: left; }
 .about-text h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .about-text p { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; }
-.about-text .highlight { text-align: center; font-weight: bold; }
+.about-text .highlight { font-weight: bold; text-align: center; }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  width: 100%;
 }
 .gallery img {
   max-width: 400px;
   width: 100%;
-  height: auto;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s;
 }
 .gallery img:hover { transform: scale(1.04); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-.contact-us form, .review-form { max-width: 600px; margin: auto; text-align: left; }
+
+.contact-us form, .review-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
 .contact-us label, .review-form label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
 .contact-us input, .contact-us textarea, .review-form input, .review-form textarea {
-  width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px;
-  font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: #333;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: #333;
+  box-sizing: border-box;
 }
 input::placeholder, textarea::placeholder {
-  font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: #aaa;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: #aaa;
 }
 .button-container {
   display: flex;
@@ -105,13 +113,10 @@ input::placeholder, textarea::placeholder {
   gap: 10px;
   margin-top: 1rem;
 }
-/* Unified button style for both Send Message and Find Us Here! */
 .button,
 .contact-us .button,
 .contact-us a.button {
-  min-width: 140px;      /* Reduced width */
-  max-width: 140px;      /* Fixed width for all buttons */
-  width: 140px;          /* Ensures all buttons are the same size */
+  width: 140px;
   text-align: center;
   font-size: 1.05rem;
   padding: 0.6rem 0.5rem;
@@ -128,36 +133,26 @@ input::placeholder, textarea::placeholder {
   display: inline-block;
   white-space: normal;
 }
-.button:hover,
-.contact-us .button:hover,
-.contact-us a.button:hover {
+.button:hover {
   background: linear-gradient(90deg, #7EC8E3 0%, #A3D9EC 100%);
   color: #111;
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 4px 16px 0 rgba(126,200,227,0.18);
 }
-.button:active,
-.contact-us .button:active,
-.contact-us a.button:active {
+.button:active {
   transform: scale(0.97);
   background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
 }
-.or-text { 
-  font-size: 1rem; 
-  font-weight: bold; 
-  color: #333; 
-}
-
-body.dark-mode .or-text {
-  color: #fafafa; /* Much darker, blends with dark background */
-}
+.or-text { font-size: 1rem; font-weight: bold; color: #333; }
+body.dark-mode .or-text { color: #fafafa; }
 .hidden-field { display: none; }
+
 .reviews h2 { font-size: 2rem; margin-bottom: 1rem; }
 .review-list { margin-top: 2rem; }
 .review-list h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 .review-list ul { list-style: none; padding: 0; }
 @media (min-width: 769px) {
-  .review-list ul { max-width: 750px; margin-left: auto; margin-right: auto; }
+  .review-list ul { max-width: 750px; margin: 0 auto; }
 }
 .review-list li {
   background: #fafafa;
@@ -169,13 +164,15 @@ body.dark-mode .or-text {
   line-height: 1.8;
   font-size: 1.08em;
 }
+
 footer {
-  background-color: #f2f2f2;
+  background: #f2f2f2;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 footer a { color: #0000EE; text-decoration: none; }
+
 .toggle-mode-btn {
   position: fixed;
   top: 1rem;
@@ -186,7 +183,6 @@ footer a { color: #0000EE; text-decoration: none; }
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  padding: 0;
   cursor: pointer;
   font-size: 1.5em;
   z-index: 1000;
@@ -195,7 +191,7 @@ footer a { color: #0000EE; text-decoration: none; }
   justify-content: center;
   transition: background 0.2s, color 0.2s;
 }
-/* --- DARK MODE --- */
+
 body.dark-mode {
   background: #181818;
   color: #f3f3f3;
@@ -206,6 +202,7 @@ body.dark-mode .contact-us,
 body.dark-mode .reviews {
   background: #232323;
   color: #f3f3f3;
+  border: 2px solid #4ec3fa;
 }
 body.dark-mode input,
 body.dark-mode textarea {
@@ -213,9 +210,7 @@ body.dark-mode textarea {
   color: #f3f3f3;
   border: 1px solid #444;
 }
-body.dark-mode .button,
-body.dark-mode .contact-us .button,
-body.dark-mode .contact-us a.button {
+body.dark-mode .button {
   background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
   color: #222;
 }
@@ -230,7 +225,7 @@ body.dark-mode footer {
   color: #f3f3f3;
 }
 body.dark-mode .review-list li {
-  background: #1E1E1E !important; /* Only chaxnges the fill in dark mode */
+  background: #1E1E1E !important;
   color: #f3f3f3;
 }
 body.dark-mode .review-list ul,
@@ -240,10 +235,10 @@ body.dark-mode .review-list li {
   line-height: 1.8;
 }
 body.dark-mode footer a {
-  color: #4ec3fa; /* Bright, high-contrast blue */
+  color: #4ec3fa;
   text-decoration: underline;
 }
-/* Make all main section headings the same size */
+
 .about-us h2,
 .saree-collection h2,
 .contact-us h2,
@@ -256,17 +251,12 @@ body.dark-mode footer a {
   text-align: center;
 }
 
-/* Responsive: smaller headings on mobile */
 @media (max-width: 768px) {
   .about-us h2,
   .saree-collection h2,
   .contact-us h2,
   .reviews h2,
-  .review-list h3 {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 768px) {
+  .review-list h3 { font-size: 1.2rem; }
   header { padding: 2.6rem 2rem; }
   .header-content { flex-direction: column; gap: 10px; }
   .header-image { max-width: 120px; }
@@ -274,31 +264,22 @@ body.dark-mode footer a {
   .left-image { max-width: 118px; }
   .right-image { max-width: 110px; }
   .about-content { flex-direction: column; text-align: center; }
-  .about-content img { margin-bottom: 0rem; max-width: 50%; }
+  .about-content img { max-width: 50%; }
   .about-text { text-align: justify; }
-  .about-text h3 { margin-top: 0rem; font-size: 1.2rem; text-align: center; }
+  .about-text h3 { font-size: 1.2rem; text-align: center; }
   .about-text p { text-align: center; }
   .about-text .justified-text { text-align: justify; }
   .contact-us form, .review-form { padding: 0 1rem; }
-  .contact-us input, .contact-us textarea, .review-form input, .review-form textarea {
-    width: 100%; box-sizing: border-box;
-  }
   .gallery { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0; }
-  .gallery img { width: 100%; height: auto; border-radius: 5px; }
-  .about-us h2, .saree-collection h2, .contact-us h2, .reviews h2, .review-list h3 { font-size: 1.5rem; }
+  .gallery img { border-radius: 5px; }
 }
+
 button:focus, input:focus, textarea:focus {
   outline: 2px solid #87ceeb;
   outline-offset: 2px;
+  border-radius: 12px;
 }
 
-/* Rounded edges for selected (focused) input and textarea fields */
-input:focus, textarea:focus {
-  border-radius: 12px;
-  outline: 2px solid #87ceeb;
-  outline-offset: 2px;
-}
-/* Lightbox styles */
 .lightbox {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -307,7 +288,7 @@ input:focus, textarea:focus {
   z-index: 1000;
 }
 .lightbox-content { position: relative; max-width: 90%; max-height: 90%; }
-.lightbox img { width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: 10px; }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 10px; }
 .hidden { display: none; }
 body.lightbox-active { overflow: hidden; }
 body.lightbox-active #lightbox-image { filter: none; }
@@ -316,99 +297,5 @@ body.lightbox-active #lightbox-image { filter: none; }
   background: transparent; border: none; font-size: 2rem; color: #fff; cursor: pointer; z-index: 10;
 }
 
-/* Dark mode for About Us box */
-body.dark-mode .about-us {
-  background: #1E1E1E;
-  border: 2px solid #4ec3fa;
-  color: #f3f3f3;
-}
-
-/* Dark mode for Our Saree Collection box */
-body.dark-mode .saree-collection {
-  background: #1E1E1E;
-  border: 2px solid #4ec3fa;
-  color: #f3f3f3;
-}
-
-/* Contact Us box styling */
-.contact-us {
-  background: #fafafa;
-  border-radius: 16px;
-  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
-  border: 2px solid #b3e6ff;
-  max-width: 96vw;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark mode for Contact Us box */
-body.dark-mode .contact-us {
-  background: #1E1E1E;
-  border: 2px solid #4ec3fa;
-  color: #f3f3f3;
-}
-
-/* Ensure form inside .contact-us is not affected */
-.contact-us form {
-  background: none;
-  border: none;
-  box-shadow: none;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  padding: 0;
-}
-
-/* Ensure gallery grid inside .saree-collection is not affected */
-.saree-collection .gallery {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 1rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-/* Customer Reviews box styling */
-.reviews {
-  background: #fafafa;
-  border-radius: 24px; /* Increased for more visible rounded corners */
-  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
-  border: 2px solid #b3e6ff;
-  max-width: 96vw;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark mode for Customer Reviews box */
-body.dark-mode .reviews {
-  background: #1E1E1E;
-  border-radius: 24px; /* Match the light mode */
-  border: 2px solid #4ec3fa;
-  color: #f3f3f3;
-}
-
-/* Ensure review-list inside .reviews is not affected */
-.reviews .review-list {
-  background: none;
-  border: none;
-  box-shadow: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 /* Add space between submit review and what our customer says */
-.review-form {
-  margin-bottom: 2.5rem;
-}
+.review-form { margin-bottom: 2.5rem; }
