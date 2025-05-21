@@ -299,3 +299,62 @@ body.lightbox-active #lightbox-image { filter: none; }
 
 /* Add space between submit review and what our customer says */
 .review-form { margin-bottom: 2.5rem; }
+
+.top-customers {
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.35);
+  border: 2px solid #b3e6ff;
+  max-width: 93vw;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.top-customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.customer-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(66, 208, 255, 0.12);
+  border: 1px solid #b3e6ff;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+}
+.customer-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+@media (max-width: 768px) {
+  .top-customers-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .customer-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+body.dark-mode .top-customers {
+  background: #232323;
+  color: #f3f3f3;
+  border: 2px solid #4ec3fa;
+}
+body.dark-mode .customer-card {
+  background: #1E1E1E;
+  color: #f3f3f3;
+  border: 1px solid #4ec3fa;
+}
+body.dark-mode .customer-img {
+  border: 2px solid #4ec3fa;
+}
