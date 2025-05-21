@@ -240,7 +240,7 @@ body.dark-mode .review-list li {
   line-height: 1.8;
 }
 body.dark-mode footer a {
-  color: #f3f3f3;
+  color: #4ec3fa; /* Bright, high-contrast blue */
   text-decoration: underline;
 }
 /* Make all main section headings the same size */
