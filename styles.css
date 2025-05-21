@@ -182,10 +182,22 @@ footer p {
 }
 
 footer small {
-  font-size: 12px;
-  color: #888;
+  display: block;
+  font-size: 0.9em;
+  color: #7c5a27; /* Dark brown for light mode */
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.03em;
+  opacity: 0.92;
+  text-align: center;
+  line-height: 1.2;
 }
 
+body.dark-mode footer small {
+  color: #ffd700; /* Gold for dark mode */
+  opacity: 1;
+}
 
 .toggle-mode-btn {
   position: fixed;
@@ -383,4 +395,63 @@ body.dark-mode .customer-card {
 }
 body.dark-mode .customer-img {
   border: 2px solid #4ec3fa;
+}
+
+.footer-credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  font-size: 0.9em;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.footer-credits small,
+.footer-credits .footer-follow {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.03em;
+  opacity: 0.97;
+  line-height: 1.2;
+  color: #8a6a2f; /* Improved dark gold for light mode */
+}
+
+.footer-credits .footer-follow {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.footer-credits .insta-link {
+  display: inline-flex;
+  align-items: center;
+  color: #7c3aed; /* True violet for handle in both modes */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.2em;
+}
+
+/* Keep the Instagram logo size unchanged */
+.footer-credits .insta-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+
+/* Make the logo white in dark mode, but do not change its size */
+body.dark-mode .footer-credits .insta-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Dark mode overrides */
+body.dark-mode .footer-credits small,
+body.dark-mode .footer-credits .footer-follow {
+  color: #ffd700;
+  opacity: 1;
+}
+
+body.dark-mode .footer-credits .insta-link {
+  color: #1bc9c9; /* Cool teal/cyan for handle in dark mode */
 }
