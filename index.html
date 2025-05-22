@@ -31,17 +31,47 @@
   </header>
 
   <main>
-    <section class="about-us">
+    <section class="about-us-carousel">
       <h2>About Us</h2>
-      <div class="about-content">
-        <img src="https://i.postimg.cc/3RFXPTmr/Founder.jpg" alt="Sandhya Rani Mangalampally">
-        <div class="about-text">
-          <h3>Sandhya Rani Mangalampally</h3>
-          <p><span class="highlight">An Entrepreneur & Head Designer</span></p>
-          <p class="justified-text">At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses and lehengas, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
-          <p class="justified-text">Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
-          <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+      <div class="carousel-container improved-carousel">
+        <button class="carousel-arrow left" id="aboutPrev" aria-label="Previous">&#8592;</button>
+        <div class="carousel-slide" id="aboutCarouselSlides">
+          <!-- Slide 1: About Us -->
+          <div class="carousel-box active improved-box">
+            <div class="carousel-img-col">
+              <div class="carousel-image improved-green-bg">
+                <img src="https://i.postimg.cc/3RFXPTmr/Founder.jpg" alt="Sandhya Rani Mangalampally">
+              </div>
+            </div>
+            <div class="carousel-content improved-content">
+              <h3>Sandhya Rani Mangalampally</h3>
+              <div class="subtitle">An Entrepreneur &amp; Head Designer</div>
+              <p class="justified-text">At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses and lehengas, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
+              <p class="justified-text">Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
+              <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+            </div>
+          </div>
+          <!-- Slide 2: Partners or Additional Info -->
+          <div class="carousel-box improved-box">
+            <div class="carousel-img-col">
+              <div class="carousel-image improved-green-bg">
+                <img src="https://i.postimg.cc/CKxhJywJ/Creator.png" alt="Kireeti Sourabh Mangalampally">
+              </div>
+            </div>
+            <div class="carousel-content improved-content">
+              <h3>Kireeti Sourabh Mangalampally</h3>
+              <div class="subtitle">Website Creator (Son)</div>
+              <p class="justified-text">I created this website for my mom, Sandhya Rani Mangalampally, who runs Sandya Designer Boutique. With a talented team of tailors and masters, she designs bridal maggam blouses, lehengas, and custom outfits for kids.
+                              </p> <p class="justified-text">She also curates a beautiful collection of sarees and handles all kinds of stitching and embroidery work. Each piece is made with care, precision, and love. I'm proud to support her and share her work through this platform. Thank you 😊</p>
+              <a class="button improved-btn" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+            </div>
+          </div>
         </div>
+        <button class="carousel-arrow right" id="aboutNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="carousel-indicators">
+        <span class="carousel-dot" id="carouselDot0"></span>
+        <span class="carousel-dot" id="carouselDot1"></span>
       </div>
     </section>
 
@@ -126,12 +156,6 @@
     <div class="review-list">
       <h3>What Our Customers Say</h3>
       <ul id="reviewsContainer">
-        
-        <li>
-          <strong>Kireeti Sourabh M</strong>
-          <p>My mom, Sandhya Rani Mangalampally, runs a boutique where she designs bridal maggam blouses, lehengas, and custom outfits for kids. Along with a skilled team of tailors and masters, she also curates a wide range of sarees and handles all types of stitching and embroidery work. Every piece is made with care and attention to detail. We’d love for you to be a part of it.</p>
-          <p>Thank You😊!</p>
-        </li>
         
         <li>
           <strong>Vipula</strong>
