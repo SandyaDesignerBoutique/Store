@@ -141,3 +141,110 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoSlide();
   updateIndicators(current);
 })();
+
+// --- Top Customers Stack Carousel ---
+(function() {
+  const stacksContainer = document.getElementById('topCustomersStacks');
+  const stacks = stacksContainer ? stacksContainer.querySelectorAll('.customer-stack') : [];
+  const prevBtn = document.getElementById('customersPrev');
+  const nextBtn = document.getElementById('customersNext');
+  const indicators = document.getElementById('customersIndicators');
+  let currentStack = 0;
+  let currentCard = 0;
+  let autoInterval;
+
+  function isMobile() {
+    return window.innerWidth <= 700;
+  }
+
+  function updateIndicators() {
+    if (!indicators) return;
+    indicators.innerHTML = '';
+    if (isMobile() && stacks.length) {
+      // Mobile: one dot per card
+      const cards = stacks[0].querySelectorAll('.customer-card');
+      cards.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (idx === currentCard ? ' active' : '');
+        dot.addEventListener('click', () => showCard(idx));
+        indicators.appendChild(dot);
+      });
+    } else {
+      // Desktop: one dot per stack
+      stacks.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (idx === currentStack ? ' active' : '');
+        dot.addEventListener('click', () => showStack(idx));
+        indicators.appendChild(dot);
+      });
+    }
+  }
+
+  function showStack(idx) {
+    stacks.forEach((stack, i) => {
+      stack.classList.toggle('active', i === idx);
+    });
+    currentStack = idx;
+    updateIndicators();
+  }
+
+  function showCard(idx) {
+    if (!stacks.length) return;
+    const cards = stacks[0].querySelectorAll('.customer-card');
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === idx);
+    });
+    currentCard = idx;
+    updateIndicators();
+  }
+
+  function next() {
+    if (isMobile()) {
+      const cards = stacks[0].querySelectorAll('.customer-card');
+      currentCard = (currentCard + 1) % cards.length;
+      showCard(currentCard);
+    } else {
+      currentStack = (currentStack + 1) % stacks.length;
+      showStack(currentStack);
+    }
+  }
+
+  function prev() {
+    if (isMobile()) {
+      const cards = stacks[0].querySelectorAll('.customer-card');
+      currentCard = (currentCard - 1 + cards.length) % cards.length;
+      showCard(currentCard);
+    } else {
+      currentStack = (currentStack - 1 + stacks.length) % stacks.length;
+      showStack(currentStack);
+    }
+  }
+
+  function startAuto() {
+    clearInterval(autoInterval);
+    autoInterval = setInterval(next, 2000);
+  }
+
+  function handleResize() {
+    if (isMobile()) {
+      // Only one stack, show one card at a time
+      stacks.forEach((stack, i) => stack.classList.toggle('active', i === 0));
+      showCard(currentCard);
+    } else {
+      // Show stacks of 3
+      stacks.forEach((stack, i) => stack.classList.toggle('active', i === currentStack));
+    }
+    updateIndicators();
+    startAuto();
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+  window.addEventListener('resize', handleResize);
+
+  // Initial setup
+  if (stacks.length) {
+    handleResize();
+    startAuto();
+  }
+})();
