@@ -1202,3 +1202,29 @@ body.dark-mode #customersIndicators .carousel-dot.active {
     font-size: 1.5rem;
   }
 }
+
+/* Mobile-only adjustments for About Us carousel arrows */
+@media (max-width: 700px) {
+  .about-us-carousel .carousel-container.improved-carousel {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us-carousel .carousel-arrow.left {
+    position: absolute;
+    left: 2vw;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .about-us-carousel .carousel-arrow.right {
+    position: absolute;
+    right: 2vw;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .about-us-carousel .carousel-slide {
+    margin-bottom: 0;
+  }
+}
