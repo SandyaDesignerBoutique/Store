@@ -418,14 +418,14 @@ body.lightbox-active #lightbox-image { filter: none; }
   }
   .contact-us form {
     padding: 1.2rem 0rem !important;
-    max-width: 90%;
+    max-width: 95%;
   }
   .reviews {
     padding: 1.2rem 0.9rem !important;
   }
   .review-form {
     padding: 1.2rem 0rem !important;
-    max-width: 90%;
+    max-width: 95%;
   }
 }
   
