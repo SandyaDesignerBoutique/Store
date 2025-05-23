@@ -383,17 +383,18 @@ body.lightbox-active #lightbox-image { filter: none; }
 }
 
 /* Club all main section headings under a single mobile media query for consistent font size and remove duplicates */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+  .about-us h2,
   .about-us-carousel h2,
   .saree-collection h2,
   .contact-us h2,
   .reviews h2,
   .review-list h3,
   .top-customers h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
     text-align: center;
   }
   .top-customers {
