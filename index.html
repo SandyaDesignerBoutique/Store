@@ -77,6 +77,11 @@
 
     <section class="saree-collection">
       <h2>Our Saree Collection</h2>
+      <div class="filter-btn-row">
+        <button class="button filter-btn" type="button" aria-label="Filter Saree Collection">
+          Filter <span class="filter-arrow">&#9660;</span>
+        </button>
+      </div>
       <div class="gallery">
         <img src="https://i.postimg.cc/qvjp0j7H/PHOTO-2025-05-12-10-47-25.jpg" data-original="https://i.postimg.cc/kgTRtjZs/PHOTO-2025-05-12-10-47-25.jpg" alt="Saree 1">
         <img src="https://i.postimg.cc/W4zT4gDF/PHOTO-2025-05-12-10-47-26-1.jpg" data-original="https://i.postimg.cc/Bb5XZNHx/PHOTO-2025-05-12-10-47-26.jpg" alt="Saree 2">
@@ -104,33 +109,34 @@
       </div>
     </section>
 
-    <section class="contact-us">
-      <h2>Contact Us</h2>
-      <p>We would love to hear from you! Reach out to us for inquiries, orders, or collaborations.</p>
-      <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
-        <!-- Formsubmit configuration -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" class="hidden-field" title="Leave this field empty">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/Store/thankyou.html">
-      
-        <!-- User inputs -->
-        <label for="contactName">Name:</label>
-        <input type="text" id="contactName" name="name" placeholder="Enter your name" required autocomplete="name">
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-      
-        <div class="button-container">
-          <button type="submit" class="button">Send Message</button>
-          <span class="or-text">or</span>
-          <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+    <section class="top-customers">
+      <h2>Top Customers</h2>
+      <div class="top-customers-carousel">
+        <button class="carousel-arrow left" id="customersPrev" aria-label="Previous">&#8592;</button>
+        <div class="top-customers-stacks" id="topCustomersStacks">
+          <!-- Stack 1 -->
+          <div class="customer-stack active">
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/8z7Q0n1y/top-customer1.jpg" alt="Top Customer 1" class="customer-img">
+              <h3>Srujana</h3>
+              <p>Loyal customer since 2018. Known for her love of custom bridal sarees and unique maggam blouses.</p>
+            </div>
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/8P7nQw2y/top-customer2.jpg" alt="Top Customer 2" class="customer-img">
+              <h3>Srinidhi</h3>
+              <p>Always first to try our latest collections. Appreciates detailed handwork and elegant lehengas.</p>
+            </div>
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/3x3QzSGq/top-customer3.jpg" alt="Top Customer 3" class="customer-img">
+              <h3>Vemula Sridevi</h3>
+              <p>Regularly at our boutique for festive and family occasions. Loves our kidswear and custom tailoring.</p>
+            </div>
+          </div>
+          <!-- Future stacks: add more .customer-stack with 3 .customer-card each -->
         </div>
-      </form>
-      
+        <button class="carousel-arrow right" id="customersNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="carousel-indicators" id="customersIndicators"></div>
     </section>
 
     <section class="reviews" id="reviews">
@@ -211,58 +217,53 @@
     </div>
   </section>
 
-    <!-- Top Customers Section -->
-    <section class="top-customers">
-      <h2>Top Customers</h2>
-      <div class="top-customers-carousel">
-        <button class="carousel-arrow left" id="customersPrev" aria-label="Previous">&#8592;</button>
-        <div class="top-customers-stacks" id="topCustomersStacks">
-          <!-- Stack 1 -->
-          <div class="customer-stack active">
-            <div class="customer-card">
-              <img src="https://i.postimg.cc/8z7Q0n1y/top-customer1.jpg" alt="Top Customer 1" class="customer-img">
-              <h3>Srujana</h3>
-              <p>Loyal customer since 2018. Known for her love of custom bridal sarees and unique maggam blouses.</p>
-            </div>
-            <div class="customer-card">
-              <img src="https://i.postimg.cc/8P7nQw2y/top-customer2.jpg" alt="Top Customer 2" class="customer-img">
-              <h3>Srinidhi</h3>
-              <p>Always first to try our latest collections. Appreciates detailed handwork and elegant lehengas.</p>
-            </div>
-            <div class="customer-card">
-              <img src="https://i.postimg.cc/3x3QzSGq/top-customer3.jpg" alt="Top Customer 3" class="customer-img">
-              <h3>Vemula Sridevi</h3>
-              <p>Regularly at our boutique for festive and family occasions. Loves our kidswear and custom tailoring.</p>
-            </div>
-          </div>
-          <!-- Future stacks: add more .customer-stack with 3 .customer-card each -->
+    <section class="contact-us">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you! Reach out to us for inquiries, orders, or collaborations.</p>
+      <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
+        <!-- Formsubmit configuration -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hidden-field" title="Leave this field empty">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/Store/thankyou.html">
+      
+        <!-- User inputs -->
+        <label for="contactName">Name:</label>
+        <input type="text" id="contactName" name="name" placeholder="Enter your name" required autocomplete="name">
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+      
+        <div class="button-container">
+          <button type="submit" class="button">Send Message</button>
+          <span class="or-text">or</span>
+          <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
         </div>
-        <button class="carousel-arrow right" id="customersNext" aria-label="Next">&#8594;</button>
-      </div>
-      <div class="carousel-indicators" id="customersIndicators"></div>
+      </form>
+      
     </section>
+
   </main>
 
-  <footer>
-    &copy; 2018 Sandya Designer Boutique. All rights reserved. | <a href="mailto:sandyadesignerboutique@gmail.com">info@sandyadesignerboutique.com</a>
-    <br>
-    <div class="footer-credits">
-      <small>Created by Kireeti Sourabh Mangalampally</small>
-      <span class="footer-follow">
-        &nbsp;|&nbsp; Follow me on
-        <a href="https://www.instagram.com/mk__sourabh/" target="_blank" rel="noopener" class="insta-link" aria-label="Instagram @mk__sourabh">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="insta-icon">
-          @mk__sourabh
-        </a>
-      </span>
-    </div>
-  </footer>
   <div id="lightbox" class="lightbox hidden">
   <div class="lightbox-content">
     <button class="lightbox-close" aria-label="Close image">&times;</button>
     <img id="lightbox-image" src="" alt="Full-size image">
   </div>
 </div>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-line1">© 2018 Sandya Designer Boutique. All rights reserved. | info@sandyadesignerboutique.com.</div>
+      <div class="footer-line2">Created by Kireeti Sourabh Mangalampally. | Follow me on
+        <a href="https://instagram.com/mk__sourabh" class="footer-insta-link" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="footer-insta-icon"/>@mk__sourabh
+        </a>
+      </div>
+    </div>
+  </footer>
   <script src="scripts.js"></script>
 </body>
 </html>
