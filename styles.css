@@ -66,13 +66,13 @@ header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 1.05rem;
   padding: 1rem;
   width: 100%;
 }
 .gallery img {
   max-width: 400px;
-  width: 100%;
+  width: 99%;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -411,6 +411,21 @@ body.lightbox-active #lightbox-image { filter: none; }
   }
   .customer-stack.active .customer-card.active {
     display: block;
+  }
+  
+  .contact-us {
+    padding: 1.2rem 0.9rem !important;
+  }
+  .contact-us form {
+    padding: 1.2rem 0rem !important;
+    max-width: 90%;
+  }
+  .reviews {
+    padding: 1.2rem 0.9rem !important;
+  }
+  .review-form {
+    padding: 1.2rem 0rem !important;
+    max-width: 90%;
   }
 }
   
