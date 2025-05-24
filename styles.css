@@ -1229,7 +1229,7 @@ body.dark-mode #customersIndicators .carousel-dot.active {
     color: #e0c97f;
     text-align: center;
     width: auto;
-    max-width: 98vw;
+    max-width: 1000vw;
     box-sizing: border-box;
     background: none;
   }
@@ -1241,8 +1241,7 @@ body.dark-mode #customersIndicators .carousel-dot.active {
     opacity: 1;
     line-height: 1.3;
     text-align: center;
-    width: auto;
-    max-width: 98vw;
+    max-width: 1000vw;
     margin: 0;
     padding: 0;
     display: block;
@@ -1262,7 +1261,7 @@ body.dark-mode #customersIndicators .carousel-dot.active {
     margin-left: 0.2em;
     color: #1bc9c9;
     font-weight: bold;
-    font-size: 9em;
+    font-size: 1em;
   }
   .footer-credits .insta-icon {
     min-width: 1em;
@@ -1307,13 +1306,13 @@ footer {
   color: #444;
   font-size: 0.98em;
   text-align: center;
-  padding: 0.7em 0.5em 0.5em 0.5em;
+  padding: 0.2em 0.5em 0.5em 0.5em;
   margin: 0;
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
 }
 .site-footer .footer-main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1353,7 +1352,7 @@ footer {
 }
 @media (max-width: 700px) {
   .site-footer .footer-main {
-    font-size: 0.98em;
+    font-size: 0.7em;
     gap: 0.18em;
   }
   .site-footer .footer-line2 {
@@ -1362,7 +1361,7 @@ footer {
   }
   .site-footer .footer-insta-link {
     margin-left: 0.1em;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
 body.dark-mode .site-footer {
