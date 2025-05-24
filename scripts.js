@@ -248,3 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
     startAuto();
   }
 })();
+
+// Inject JSON-LD for Organization
+(function() {
+  var orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sandya Designer Boutique",
+    "url": "https://sandyadesignerboutique.github.io/Store/",
+    "logo": "https://i.postimg.cc/PrK4fMtb/goldennn-1.png"
+  };
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify(orgJsonLd);
+  document.head.appendChild(script);
+})();
