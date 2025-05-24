@@ -1320,7 +1320,7 @@ footer {
   gap: 0.2em;
 }
 .site-footer .footer-line1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.97em;
   color: #666;
   margin-bottom: 0.1em;
@@ -1330,7 +1330,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4em;
+  gap: 0.2em;
   font-size: 0.97em;
   color: #444;
   flex-wrap: wrap;
