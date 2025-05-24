@@ -1331,7 +1331,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0.2em;
-  font-size: 0.97em;
+  font-size: 0.9em;
   color: #444;
   flex-wrap: wrap;
 }
@@ -1345,9 +1345,9 @@ footer {
   font-size: 1em;
 }
 .site-footer .footer-insta-icon {
-  width: 1.1em;
-  height: 1.1em;
-  margin: 0 0.18em 0 0.18em;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.1em 0 0.1em;
   vertical-align: middle;
   display: inline-block;
 }
@@ -1357,8 +1357,8 @@ footer {
     gap: 0.18em;
   }
   .site-footer .footer-line2 {
-    gap: 0.1em;
-    font-size: 0.97em;
+    gap: 0.18em;
+    font-size: 0.9em;
   }
   .site-footer .footer-insta-link {
     margin-left: 0.1em;
