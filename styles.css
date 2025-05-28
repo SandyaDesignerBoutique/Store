@@ -532,6 +532,11 @@ body.dark-mode .carousel-arrow:hover, body.dark-mode .carousel-arrow:focus {
     min-height: 38px;
     font-size: 1.2em;
   }
+  .about-us-carousel .carousel-arrow.left,
+  .about-us-carousel .carousel-arrow.right {
+    top: 15%; /* Move arrows higher up */
+    transform: translateY(-50%);
+  }
 }
 .carousel-slide {
   display: flex;
@@ -1013,15 +1018,15 @@ body.dark-mode #customersIndicators .carousel-dot.active {
   }
   .about-us-carousel .carousel-arrow.left {
     position: absolute;
-    left: 2vw;
-    top: 32%;
+    left: 5vw;
+    top: 15%; /* Move arrows higher up */
     transform: translateY(-50%);
     z-index: 10;
   }
   .about-us-carousel .carousel-arrow.right {
     position: absolute;
-    right: 2vw;
-    top: 32%;
+    right: 5vw;
+    top: 15%; /* Move arrows higher up */
     transform: translateY(-50%);
     z-index: 10;
   }
