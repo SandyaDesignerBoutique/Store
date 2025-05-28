@@ -166,10 +166,10 @@ body.dark-mode .or-text { color: #fafafa; }
   background: #fafafa;
   border-radius: 5px;
   margin-bottom: 1em;
-  padding: 1em;
+  padding: 0.5em 1em;
   box-shadow: 0 1px 4px rgb(0, 191, 255);
   text-align: justify;
-  line-height: 1;
+  line-height: 1.6 !important;
   font-size: 1em;
 }
 
