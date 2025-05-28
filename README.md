@@ -2,6 +2,12 @@
 
 An entrepreneur & Head Designer at Sandya Designer Boutique specializing in traditional Indian ethnic wear.
 
+---
+
+**Website created by Kireeti Sourabh Mangalampally (Son)**
+
+---
+
 # Welcome to ✨SANDYA DESIGNER BOUTIQUE✨
 
 ## Visit our 🌐Online Store: https://sandyadesignerboutique.github.io/Store/
