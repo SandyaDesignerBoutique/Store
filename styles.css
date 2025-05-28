@@ -1325,6 +1325,7 @@ footer {
   color: #666;
   margin-bottom: 0.1em;
   word-break: break-word;
+  overflow-wrap: anywhere;
 }
 .site-footer .footer-line2 {
   display: flex;
@@ -1354,7 +1355,7 @@ footer {
 }
 @media (max-width: 700px) {
   .site-footer .footer-main {
-    font-size: 0.7em !important;
+    font-size: 0.7em;
     gap: 0.18em;
   }
   .site-footer .footer-line2 {
@@ -1375,6 +1376,7 @@ footer {
     margin-right: 0;
     box-sizing: border-box;
     word-break: break-word;
+    overflow-wrap: anywhere;
   }
 }
 body.dark-mode .site-footer {
