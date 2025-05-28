@@ -68,10 +68,15 @@ header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.05rem;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+  gap: 0.7rem;
   padding: 1rem;
-  width: 100%;
+  width: 101%;
+}
+@media (max-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fallback for tablets and below */
+  }
 }
 .gallery img {
   max-width: 400px;
@@ -434,8 +439,9 @@ body.lightbox-active #lightbox-image { filter: none; }
   }
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.3rem;
-    padding: 0.2rem;
+    gap: 0.4rem;
+    padding: 0.3rem;
+    width: 109%;
   }
   .gallery img {
     border-radius: 5px;
