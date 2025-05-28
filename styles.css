@@ -1354,7 +1354,7 @@ footer {
 }
 @media (max-width: 700px) {
   .site-footer .footer-main {
-    font-size: 0.65em;
+    font-size: 0.7em !important;
     gap: 0.18em;
   }
   .site-footer .footer-line2 {
