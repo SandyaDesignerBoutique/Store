@@ -263,3 +263,87 @@ document.addEventListener("DOMContentLoaded", () => {
   script.text = JSON.stringify(orgJsonLd);
   document.head.appendChild(script);
 })();
+
+// === Review Carousel Logic ===
+(function() {
+  const reviews = [
+    { name: "Vipula", text: "Customer satisfaction 100 percent" },
+    { name: "Sreedevi Deshpandey", text: "I have had the pleasure of working with Sandhya garu for my tailoring needs, be it bridal work, dress stitching and many more. The attention to detail, quality of work and the fitting are always spot on. Whether it is a simple alteration job or a custom piece, they consistently deliver the best. What started as a customer relationship has become a beautiful friendship. For this I can't recommend them enough for their expert tailoring and top-notch Customer care." },
+    { name: "Srinidhi", text: "Sandhya aunty gives her 100% for every piece that she picks up for design. What started with my Sister's bridal designs, to my bridal designs and everything after, Sandhya aunty is our go-to person, everything ethnic." },
+    { name: "Vemula sridevi", text: "I highly recommend Sandhya Designer Boutique fr high-quality, stylish clothing and especially impressed with their on-time delivery and exclusive designer wear saree Collection" },
+    { name: "Kadali Kuntla", text: "Lovely designs and great work." },
+    { name: "Polleni Madhav", text: "Smart work 👍" },
+    { name: "Buzz", text: "elegant stitching. Love it." },
+    { name: "Pavanisai Pala", text: "Lovely boutique with a great collection. Amazing work!!!" },
+    { name: "Prasana Laxmi", text: "Excellent designs at affordable prices" },
+    { name: "Navyasree P", text: "Nice stitching...." },
+    { name: "Kruthika", text: "Sandhya Boutique offers elegant, handcrafted designs with a personal touch. Perfect for those seeking unique, traditional styles." }
+  ];
+
+  const carouselList = document.getElementById('reviewCarouselList');
+  const upBtn = document.querySelector('.review-arrow.up');
+  const downBtn = document.querySelector('.review-arrow.down');
+  let current = 0;
+  let autoScrollTimer = null;
+  let isPaused = false;
+
+  function getIndices(center) {
+    // Returns [top, middle, bottom] indices, looping
+    const n = reviews.length;
+    const mid = center % n;
+    const top = (mid - 1 + n) % n;
+    const bot = (mid + 1) % n;
+    return [top, mid, bot];
+  }
+
+  function render() {
+    const [top, mid, bot] = getIndices(current);
+    carouselList.innerHTML = '';
+    [top, mid, bot].forEach((idx, i) => {
+      const item = document.createElement('div');
+      item.className = 'review-item' + (i === 1 ? ' middle' : '');
+      item.innerHTML = `<strong>${reviews[idx].name}</strong><p>${reviews[idx].text}</p>`;
+      carouselList.appendChild(item);
+    });
+    // Animate: slide up/down
+    carouselList.style.transform = 'translateY(0)';
+  }
+
+  function next() {
+    current = (current + 1) % reviews.length;
+    render();
+  }
+  function prev() {
+    current = (current - 1 + reviews.length) % reviews.length;
+    render();
+  }
+
+  function autoScroll() {
+    if (isPaused) return;
+    next();
+    autoScrollTimer = setTimeout(autoScroll, 3500);
+  }
+
+  function pauseAutoScroll() {
+    isPaused = true;
+    clearTimeout(autoScrollTimer);
+    setTimeout(() => { isPaused = false; autoScroll(); }, 9000);
+  }
+
+  upBtn.addEventListener('click', () => { prev(); pauseAutoScroll(); });
+  downBtn.addEventListener('click', () => { next(); pauseAutoScroll(); });
+
+  // Touch/drag support for mobile
+  let startY = null;
+  carouselList.addEventListener('touchstart', e => { startY = e.touches[0].clientY; });
+  carouselList.addEventListener('touchend', e => {
+    if (startY === null) return;
+    const endY = e.changedTouches[0].clientY;
+    if (endY - startY > 30) { prev(); pauseAutoScroll(); }
+    else if (startY - endY > 30) { next(); pauseAutoScroll(); }
+    startY = null;
+  });
+
+  render();
+  setTimeout(autoScroll, 3500);
+})();
