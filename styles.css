@@ -1513,12 +1513,35 @@ body.dark-mode .review-carousel-title {
   margin-bottom: 0.3rem;
 }
 
+/* === Boutique Section Headings: Use Dancing Script for all major section titles === */
+.saree-collection h2,
+.top-customers h2,
+.reviews h2,
+.review-carousel-title,
+.contact-us h2,
+.about-us-carousel h2 {
+  font-family: 'Dancing Script', 'Pacifico', cursive, 'Comic Sans MS', sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
 @media (max-width: 700px) {
-  .review-form {
-    margin-bottom: 0rem !important;
+  .saree-collection h2,
+  .top-customers h2,
+  .reviews h2,
+  .review-carousel-title,
+  .contact-us h2,
+  .about-us-carousel h2 {
+    font-size: 1.5rem !important;
   }
-  .review-carousel-title {
-    margin-top: 0 !important;
-    margin-bottom: 0.5rem !important;
-  }
+}
+
+body.dark-mode .saree-collection h2,
+body.dark-mode .top-customers h2,
+body.dark-mode .reviews h2,
+body.dark-mode .contact-us h2 {
+  color: #f3f3f3 !important;
 }
