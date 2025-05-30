@@ -1,3 +1,4 @@
+/* === Hero Section === */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -11,7 +12,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-h1, h2, h3 { font-family: 'Roboto Mono', monospace; }
 header {
   background: #ADD8E6;
   color: #333;
@@ -34,8 +34,16 @@ header {
 }
 .left-image { left: 0; }
 .right-image { right: 0; max-width: 183px; }
-header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
+header h1 { margin: 0; font-size: 4.43rem; text-align: center; z-index: 1; }
+/* === Boutique Title Font === */
+header h1 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+/* === End Boutique Title Font === */
 
+/* === About Us Section === */
 .about-us, .contact-us, .reviews, .saree-collection {
   background: #fafafa;
   border-radius: 16px;
@@ -66,6 +74,7 @@ header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
 .about-text p { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; }
 .about-text .highlight { font-weight: bold; text-align: center; }
 
+/* === Saree Collection Section === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
@@ -87,6 +96,7 @@ header h1 { margin: 0; font-size: 4rem; text-align: center; z-index: 1; }
 }
 .gallery img:hover { transform: scale(1.04); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 
+/* === Contact Us Section === */
 .contact-us form, .review-form {
   max-width: 600px;
   margin: auto;
@@ -231,15 +241,17 @@ body.dark-mode .or-text { color: #fafafa; }
 }
 /* === End Centralized Customer Reviews & What Our Customers Say Section === */
 
+/* === Footer Section === */
 footer a { 
   color: #0000EE; text-decoration: none;
          }
 
 body.dark-mode footer small {
-  color: #ffd700; /* Gold for dark mode */
+  color: #f3f3f3; /* Use #f3f3f3 instead of gold in dark mode */
   opacity: 1;
 }
 
+/* === Theme Toggle Button === */
 .toggle-mode-btn {
   position: fixed;
   top: 1rem;
@@ -259,6 +271,7 @@ body.dark-mode footer small {
   transition: background 0.2s, color 0.2s;
 }
 
+/* === Dark Mode Styles === */
 body.dark-mode {
   background: #181818;
   color: #f3f3f3;
@@ -306,6 +319,7 @@ body.dark-mode footer a {
   text-decoration: underline;
 }
 
+/* === Section Headings (General) === */
 .about-us h2,
 .saree-collection h2,
 .contact-us h2,
@@ -318,6 +332,7 @@ body.dark-mode footer a {
   text-align: center;
 }
 
+/* === Byline/Branding === */
 .byline-desktop {
   display: block;
   font-family: 'Dancing Script', 'Pacifico', cursive, 'Comic Sans MS', sans-serif;
@@ -329,13 +344,14 @@ body.dark-mode footer a {
   text-align: center;
 }
 
+/* === Responsive Headings === */
 @media (max-width: 768px) {
   .about-us h2,
   .saree-collection h2,
   .contact-us h2,
   .reviews h2,
   .review-list h3 { font-size: 1.2rem; }
-  header { padding: 3.2rem 2rem; }
+  header { padding: 4.5rem 2rem; }
   .header-content { flex-direction: column; gap: 10px; }
   .header-image { max-width: 120px; }
   header h1 { font-size: 1.8rem; }
@@ -353,12 +369,14 @@ body.dark-mode footer a {
   .gallery img { border-radius: 5px; }
 }
 
+/* === Accessibility Focus Styles === */
 button:focus, input:focus, textarea:focus {
   outline: 2px solid #87ceeb;
   outline-offset: 2px;
   border-radius: 12px;
 }
 
+/* === Lightbox Styles === */
 .lightbox {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -376,11 +394,12 @@ body.lightbox-active #lightbox-image { filter: none; }
   background: transparent; border: none; font-size: 2rem; color: #fff; cursor: pointer; z-index: 10;
 }
 
-/* Add space between submit review and what our customer says */
+/* === Review Form Spacing === */
 .review-form { margin-bottom: 0.8rem !important; }
 
 
 
+/* === Top Customers Section === */
 .top-customers {
   background: #fafafa;
   border-radius: 16px;
@@ -418,8 +437,20 @@ body.lightbox-active #lightbox-image { filter: none; }
   object-fit: cover;
   margin-bottom: 0.7rem;
 }
+.top-customers .customer-card h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic;
+  font-weight: 700;
+  color: #547126;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+body.dark-mode .top-customers .customer-card h3 {
+  color: #8be18b !important;
+}
 
-/* Club all main section headings under a single mobile media query for consistent font size and remove duplicates */
+/* === Top Customers Responsive & Stack === */
 @media (max-width: 700px) {
   .about-us h2,
   .about-us-carousel h2,
@@ -491,7 +522,7 @@ body.dark-mode .customer-img {
   border: 2px solid #4ec3fa;
 }
 
-/* About Us Carousel Styles */
+/* === About Us Carousel Section === */
 .about-us-carousel {
   margin: 0 0 3rem 0;
   text-align: center;
@@ -682,19 +713,30 @@ body.dark-mode .carousel-arrow:hover, body.dark-mode .carousel-arrow:focus {
   box-sizing: border-box;
 }
 .carousel-content.improved-content h3 {
-  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem;
   margin-top: 0rem;
   margin-bottom: 0.2rem;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 700;
+  color: #547126;
+  text-align: left;
 }
 .carousel-content.improved-content .subtitle {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #547126;
+  font-family: 'Dancing Script', 'Pacifico', cursive, 'Comic Sans MS', sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #7cae4c;
   margin-bottom: 0rem;
-  font-family: 'Roboto', Arial, sans-serif;
+  text-align: left;
   letter-spacing: 0.01em;
+}
+body.dark-mode .carousel-content.improved-content h3 {
+  color: #8be18b !important;
+}
+body.dark-mode .carousel-content.improved-content .subtitle {
+  color: #b6eeb6 !important;
 }
 .carousel-content.improved-content p {
   font-size: 0.9rem;
@@ -780,7 +822,7 @@ body.dark-mode .carousel-arrow:hover, body.dark-mode .carousel-arrow:focus {
   }
 }
 
-/* Fix About Us section colors in light mode mobile view */
+/* === About Us Carousel Mobile Colors === */
 @media (max-width: 700px) {
   .carousel-box.improved-box {
     background: #fafafa;
@@ -805,6 +847,7 @@ body.dark-mode .carousel-content.improved-content p {
   color: #f3f3f3;
 }
 
+/* === Carousel Indicators === */
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -1064,7 +1107,7 @@ body.dark-mode #customersIndicators .carousel-dot.active {
   }
 }
 
-/* Filter button above gallery */
+/* === Gallery Filter Button === */
 .filter-btn {
   max-width: 7%;
   margin-bottom: 0.2rem;
@@ -1189,7 +1232,7 @@ footer {
   padding-bottom: 0 !important;
 }
 
-/* Minimal, readable footer for all modes */
+/* === Minimal Footer === */
 .site-footer {
   width: 100%;
   background: #f7f7f7;
@@ -1269,12 +1312,12 @@ footer {
 }
 body.dark-mode .site-footer {
   background: #232323;
-  color: #e0c97f;
+  color: #f3f3f3;
   border-top: 1px solid #444;
 }
 body.dark-mode .site-footer .footer-line1,
 body.dark-mode .site-footer .footer-line2 {
-  color: #e0c97f;
+  color: #f3f3f3 !important;
 }
 body.dark-mode .site-footer .footer-insta-link {
   color: #1bc9c9;
@@ -1375,7 +1418,7 @@ body.dark-mode .carousel-arrow {
   }
 }
 
-/* === Review Carousel Styles === */
+/* === Review Carousel Section === */
 .review-carousel {
   position: relative;
   width: 100%;
@@ -1485,7 +1528,7 @@ body.dark-mode .review-blur-bottom {
   background: linear-gradient(to top, #232323 60%, rgba(35,35,35,0.01) 100%);
 }
 
-/* Add style for the review-carousel-title to match other section headings */
+/* === Review Carousel Title === */
 .review-carousel-title {
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5rem;
@@ -1504,7 +1547,7 @@ body.dark-mode .review-carousel-title {
   color: #e0c97f;
 }
 
-/* Reduce gap between review form and 'What Our Customers Say' title */
+/* === Review Form Spacing === */
 .review-form {
   margin-bottom: 0.8rem !important;
 }
@@ -1545,3 +1588,16 @@ body.dark-mode .reviews h2,
 body.dark-mode .contact-us h2 {
   color: #f3f3f3 !important;
 }
+
+/* === About Us Carousel Name & Subtitle Font Fix === */
+.carousel-content.improved-content h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+.carousel-content.improved-content .subtitle {
+  font-family: 'Dancing Script', 'Pacifico', cursive, 'Comic Sans MS', sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+/* === End About Us Carousel Name & Subtitle Font Fix === */
