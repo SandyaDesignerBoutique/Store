@@ -1,3 +1,4 @@
+// =================== LIGHT/DARK MODE TOGGLE SECTION ===================
 // Light/Dark mode toggle logic
 const btn = document.getElementById('toggleModeBtn');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -13,7 +14,9 @@ btn.addEventListener('click', () => {
   localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
   btn.blur(); // Remove focus after click
 });
+// =================== END LIGHT/DARK MODE TOGGLE SECTION ===================
 
+// =================== LIGHTBOX GALLERY SECTION ===================
 // Lightbox gallery logic
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = document.querySelectorAll(".gallery img");
@@ -49,7 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// =================== END LIGHTBOX GALLERY SECTION ===================
 
+// =================== ABOUT US CAROUSEL SECTION ===================
 // About Us Carousel Functionality
 (function() {
   const slides = document.querySelectorAll('.about-us-carousel .carousel-box');
@@ -141,7 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoSlide();
   updateIndicators(current);
 })();
+// =================== END ABOUT US CAROUSEL SECTION ===================
 
+// =================== TOP CUSTOMERS CAROUSEL SECTION ===================
 // --- Top Customers Stack Carousel ---
 (function() {
   const stacksContainer = document.getElementById('topCustomersStacks');
@@ -248,7 +255,9 @@ document.addEventListener("DOMContentLoaded", () => {
     startAuto();
   }
 })();
+// =================== END TOP CUSTOMERS CAROUSEL SECTION ===================
 
+// =================== ORGANIZATION JSON-LD SECTION ===================
 // Inject JSON-LD for Organization
 (function() {
   var orgJsonLd = {
@@ -258,12 +267,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "url": "https://sandyadesignerboutique.github.io/Store/",
     "logo": "https://i.postimg.cc/PrK4fMtb/goldennn-1.png"
   };
-  var script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.text = JSON.stringify(orgJsonLd);
-  document.head.appendChild(script);
+  // Only inject if not already present
+  if (!document.querySelector('script[type="application/ld+json"][data-org-jsonld]')) {
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-org-jsonld', 'true');
+    script.text = JSON.stringify(orgJsonLd);
+    document.head.appendChild(script);
+  }
 })();
+// =================== END ORGANIZATION JSON-LD SECTION ===================
 
+// =================== REVIEWS CAROUSEL SECTION ===================
 // === Review Carousel Logic ===
 (function() {
   const reviews = [
@@ -347,3 +362,4 @@ document.addEventListener("DOMContentLoaded", () => {
   render();
   setTimeout(autoScroll, 3500);
 })();
+// =================== END REVIEWS CAROUSEL SECTION ===================
