@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     [top, mid, bot].forEach((idx, i) => {
       const item = document.createElement('div');
       item.className = 'review-item' + (i === 1 ? ' middle' : '');
-      item.innerHTML = `<strong>${reviews[idx].name}</strong><p>${reviews[idx].text}</p>`;
+      item.innerHTML = `<strong class="reviewer-name">${reviews[idx].name}</strong><p>${reviews[idx].text}</p>`;
       carouselList.appendChild(item);
     });
     // Animate: slide up/down

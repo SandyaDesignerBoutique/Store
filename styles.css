@@ -32,14 +32,15 @@ header {
   max-width: 200px;
   height: auto;
 }
-.left-image { left: 0; }
-.right-image { right: 0; max-width: 183px; }
-header h1 { margin: 0; font-size: 4.43rem; text-align: center; z-index: 1; }
+.left-image { left: 0; max-width: 200px; }
+.right-image { right: 0; max-width: 184.8px; }
+header h1 { margin: 0; font-size: 4.5rem; text-align: center; z-index: 1; }
 /* === Boutique Title Font === */
 header h1 {
   font-family: 'Cormorant Garamond', serif !important;
   font-style: italic !important;
   font-weight: 700 !important;
+  text-shadow: #C28840 2px 2px 4px;
 }
 /* === End Boutique Title Font === */
 
@@ -215,6 +216,31 @@ body.dark-mode .or-text { color: #fafafa; }
   font-size: 1em;
 }
 
+/* Style for reviewer's name in both static and dynamic reviews */
+.reviews li strong,
+.review-carousel-list .reviewer-name {
+  font-family: 'Cormorant Garamond', serif!important;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #B6862C;
+}
+body.dark-mode .reviews li strong,
+body.dark-mode .review-carousel-list .reviewer-name {
+  color: #e0c97f;
+}
+
+/* Top Customers name color */
+.top-customers .customer-card h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic;
+  font-weight: 700;
+  color: #B6862C !important;
+}
+body.dark-mode .top-customers .customer-card h3 {
+  color: #e0c97f !important;
+}
+
 /* --- Mobile Styles for Customer Reviews & What Our Customers Say --- */
 @media (max-width: 700px) {
   .reviews {
@@ -354,7 +380,7 @@ body.dark-mode footer a {
   header { padding: 4.5rem 2rem; }
   .header-content { flex-direction: column; gap: 10px; }
   .header-image { max-width: 120px; }
-  header h1 { font-size: 1.8rem; }
+  header h1 { font-size: 1.79rem; }
   .byline-desktop { font-size: 1rem;margin-top: 0.4rem; }
   .left-image { max-width: 100px; }
   .right-image { max-width: 93px; }
@@ -440,14 +466,14 @@ body.lightbox-active #lightbox-image { filter: none; }
 .top-customers .customer-card h3 {
   font-family: 'Cormorant Garamond', serif !important;
   font-style: italic;
-  font-weight: 700;
-  color: #547126;
+  font-weight: Bold 700;
+  color: #B6862C !important;
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
   text-align: center;
 }
 body.dark-mode .top-customers .customer-card h3 {
-  color: #8be18b !important;
+  color: #e0c97f !important;
 }
 
 /* === Top Customers Responsive & Stack === */
@@ -736,7 +762,7 @@ body.dark-mode .carousel-content.improved-content h3 {
   color: #8be18b !important;
 }
 body.dark-mode .carousel-content.improved-content .subtitle {
-  color: #b6eeb6 !important;
+  color: #f7e7b3 !important;
 }
 .carousel-content.improved-content p {
   font-size: 0.9rem;
@@ -1359,18 +1385,6 @@ body.dark-mode .carousel-arrow {
   border: 2px solid #4ec3fa;
 }
 
-.carousel-box.improved-box {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  border-radius: 16px;
-  margin: 0 auto;
-  padding: 0;
-  /* Remove extra border and shadow if inside .about-us-carousel */
-  border: none;
-  box-shadow: none;
-}
-
 .about-us-carousel {
   overflow: hidden;
 }
@@ -1544,7 +1558,7 @@ body.dark-mode .review-blur-bottom {
   }
 }
 body.dark-mode .review-carousel-title {
-  color: #e0c97f;
+  color: #f3f3f3;
 }
 
 /* === Review Form Spacing === */
@@ -1567,7 +1581,8 @@ body.dark-mode .review-carousel-title {
   font-size: 2rem !important;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   color: #444;
 }
 
@@ -1589,6 +1604,22 @@ body.dark-mode .contact-us h2 {
   color: #f3f3f3 !important;
 }
 
+/* === About Us Carousel Name Color (Light & Dark Mode) */
+.about-us-carousel .carousel-content.improved-content h3 {
+  color: #B6862C !important;
+}
+body.dark-mode .about-us-carousel .carousel-content.improved-content h3 {
+  color: #e0c97f !important;
+}
+
+/* About Us Carousel Subtitle Color (Light & Dark Mode) */
+.about-us-carousel .carousel-content.improved-content .subtitle {
+  color: #d4b06a !important;
+}
+body.dark-mode .about-us-carousel .carousel-content.improved-content .subtitle {
+  color: #f7e7b3 !important;
+}
+
 /* === About Us Carousel Name & Subtitle Font Fix === */
 .carousel-content.improved-content h3 {
   font-family: 'Cormorant Garamond', serif !important;
@@ -1601,3 +1632,52 @@ body.dark-mode .contact-us h2 {
   font-style: normal;
 }
 /* === End About Us Carousel Name & Subtitle Font Fix === */
+
+/* === Card Hover Effects for About Us Carousel === */
+.carousel-box.improved-box {
+  scale: 0.8;
+  width: auto;
+  max-width: auto;
+  box-sizing: border-box;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 0;
+  /* Remove extra border and shadow if inside .about-us-carousel */
+  border: none;
+  box-shadow: none;
+}
+
+.carousel-card-scale {
+  transform: scale(1); /* Default scale */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  transition: transform 0.3s cubic-bezier(0.4,0.2,0.2,1);
+  will-change: transform;
+}
+.carousel-box.improved-box:hover .carousel-card-scale,
+.carousel-box.improved-box:focus-within .carousel-card-scale {
+  transform: scale(1); /* Change this value to control scaling */
+  z-index: 3;
+  box-shadow: 0 4px 16px rgba(250, 196, 2, 0.285);
+}
+@media (max-width: 700px) {
+  .carousel-card-scale {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+  }
+}
+
+body.dark-mode .carousel-box.improved-box {
+  background: #232323 !important;
+  border: none;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+}
