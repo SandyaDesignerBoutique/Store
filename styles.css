@@ -914,6 +914,7 @@ body.dark-mode .carousel-dot.active {
     padding: 0;
   }
   .carousel-box.improved-box {
+    scale: 0.95 !important;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -957,8 +958,8 @@ body.dark-mode .carousel-dot.active {
     margin: 0 auto;
   }
   .carousel-content.improved-content {
-    width: 92vw;
-    max-width: 92vw;
+    width: 98vw;
+    max-width: 98vw;
     min-width: 0;
     border-radius: 0;
     padding: 1.1rem 0.7rem 0.7rem 0.7rem;
@@ -968,18 +969,6 @@ body.dark-mode .carousel-dot.active {
     box-shadow: none;
     align-items: center;
     text-align: center;
-  }
-  .carousel-content.improved-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.2rem;
-    text-align: center;
-    color: #547126; /* Green for name in light mode */
-  }
-  .carousel-content.improved-content .subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 0.7rem;
-    text-align: center;
-    color: #7cae4c; /* Softer green for subtitle in light mode */
   }
   .carousel-content.improved-content p {
     font-size: 0.92rem;
