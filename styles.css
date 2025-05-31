@@ -1744,7 +1744,6 @@ body.dark-mode .carousel-box.improved-box {
 .numbered-contact-btn:hover img,
 .numbered-contact-btn:focus img {
   transform: scale(1.08);
-  filter: none; /* clear default shadow */
 }
 /* Phone Button */
 .numbered-contact-btn:nth-child(1):hover img,
@@ -1777,7 +1776,7 @@ body.dark-mode .carousel-box.improved-box {
 /* Mobile: adjust numbered contact buttons position */
 @media (max-width: 700px) {
   .numbered-contact-buttons {
-    left: 36.6%;
+    left: 35%;
     gap: 10px;
     margin-top: 15px;
   }
@@ -1790,8 +1789,4 @@ body.dark-mode .carousel-box.improved-box {
     height: 30px;
     width: 30px;
   }
-.numbered-contact-btn:hover img,
-.numbered-contact-btn:focus img {
-  transform: scale(1.08);
-}
 }
