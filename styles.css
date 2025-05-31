@@ -1790,4 +1790,8 @@ body.dark-mode .carousel-box.improved-box {
     height: 30px;
     width: 30px;
   }
+.numbered-contact-btn:hover img,
+.numbered-contact-btn:focus img {
+  transform: scale(1.08);
+}
 }
