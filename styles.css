@@ -1778,6 +1778,11 @@ body.dark-mode .carousel-box.improved-box {
     margin-top: 15px;
   }
   .numbered-contact-btn img {
+      filter: 
+          drop-shadow(-0.5px -0.5px 0 #444)
+          drop-shadow(0.5px -0.5px 0 #444)
+          drop-shadow(-0.5px 0.5px 0 #444)
+          drop-shadow(0.5px 0.5px 0 #444);
     height: 30px;
     width: 30px;
   }
