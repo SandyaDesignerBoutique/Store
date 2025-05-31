@@ -1732,10 +1732,10 @@ body.dark-mode .carousel-box.improved-box {
   border-radius: 8px;
   box-shadow: none;
   background: none;
-  filter: drop-shadow(-0.5px -0.5px 0 #444)
-          drop-shadow(0.5px -0.5px 0 #444)
-          drop-shadow(-0.5px 0.5px 0 #444)
-          drop-shadow(0.5px 0.5px 0 #444);
+  filter: drop-shadow(-1px -1px 0 #444)
+          drop-shadow(1px 1px 0 #444)
+          drop-shadow(-1px 1px 0 #444)
+          drop-shadow(1px -1px 0 #444);
   transition: filter 0.2s, transform 0.2s;
 }
 .numbered-contact-btn:hover img,
@@ -1778,11 +1778,6 @@ body.dark-mode .carousel-box.improved-box {
     margin-top: 15px;
   }
   .numbered-contact-btn img {
-      filter: 
-          drop-shadow(-0.5px -0.5px 0 #444)
-          drop-shadow(0.5px -0.5px 0 #444)
-          drop-shadow(-0.5px 0.5px 0 #444)
-          drop-shadow(0.5px 0.5px 0 #444);
     height: 30px;
     width: 30px;
   }
