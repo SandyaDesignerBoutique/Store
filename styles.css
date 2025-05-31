@@ -207,7 +207,7 @@ body.dark-mode .or-text { color: #fafafa; }
 }
 .review-list li {
   background: #fafafa;
-  border-radius1px;
+  border-radius: 1px;
   margin-bottom: 1em;
   padding: 0.5em 1em;
   box-shadow: 0 1px 3px rgb(0, 213, 255);
@@ -258,7 +258,7 @@ body.dark-mode .top-customers .customer-card h3 {
   }
   .review-list li {
     font-size: 0.92rem;
-    border-radius1px;
+    border-radius: 1px;
     margin-bottom: 0.7em;
     padding: 0.5em 0.7em;
     text-align: justify !important;
@@ -392,7 +392,7 @@ body.dark-mode footer a {
   .about-text .justified-text { text-align: justify; }
   .contact-us form, .review-form { padding: 0 1rem; }
   .gallery { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0; }
-  .gallery img { border-radius1px; }
+  .gallery img { border-radius: 1px; }
 }
 
 /* === Accessibility Focus Styles === */
@@ -528,7 +528,7 @@ body.dark-mode .top-customers .customer-card h3 {
     width: 109%;
   }
   .gallery img {
-    border-radius1px;
+    border-radius: 1px;
     margin: 0;
   }
 }
@@ -1449,7 +1449,7 @@ body.dark-mode .carousel-arrow {
 }
 .review-carousel-list .review-item {
   background: #fafafa;
-  border-radius1px;
+  border-radius: 1px;
   margin: 1rem 1rem 1rem 1rem;
   padding: 1rem 1rem 1rem 1rem;
   box-shadow: 0 1px 4px 0 rgb(0, 213, 255);
@@ -1717,7 +1717,7 @@ body.dark-mode .carousel-box.improved-box {
 /* === Centered Numbered Contact Buttons === */
 .numbered-contact-buttons {
     position: absolute;
-  left: 44%;
+  left: 45.2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1726,16 +1726,16 @@ body.dark-mode .carousel-box.improved-box {
   margin-bottom: 10px;
 }
 .numbered-contact-btn img {
-  height: 44px;
-  width: 44px;
+  height: 30px;
+  width: 30px;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: none;
   background: none;
-  filter: drop-shadow(-1px -1px 0 #444)
-          drop-shadow(1px -1px 0 #444)
-          drop-shadow(-1px 1px 0 #444)
-          drop-shadow(1px 1px 0 #444);
+  filter: drop-shadow(-0.5px -0.5px 0 #444)
+          drop-shadow(0.5px -0.5px 0 #444)
+          drop-shadow(-0.5px 0.5px 0 #444)
+          drop-shadow(0.5px 0.5px 0 #444);
   transition: filter 0.2s, transform 0.2s;
 }
 .numbered-contact-btn:hover img,
@@ -1746,28 +1746,28 @@ body.dark-mode .carousel-box.improved-box {
 .numbered-contact-btn:nth-child(1):hover img,
 .numbered-contact-btn:nth-child(1):focus img {
   filter:
-    drop-shadow(-1px -1px 0 #002c99)
-    drop-shadow(1px -1px 0 #041d9a)
-    drop-shadow(-1px 1px 0 #007AFF)
-    drop-shadow(1px 1px 0 #1C1C1E);
+    drop-shadow(-0.5px -0.5px 0 #002c99)
+    drop-shadow(0.5px -0.5px 0 #041d9a)
+    drop-shadow(-0.5px 0.5px 0 #007AFF)
+    drop-shadow(0.5px 0.5px 0 #1C1C1E);
 }
 /* WhatsApp Button */
 .numbered-contact-btn:nth-child(2):hover img,
 .numbered-contact-btn:nth-child(2):focus img {
   filter:
-    drop-shadow(-1px -1px 0 #1ca938)
-    drop-shadow(1px -1px 0 #015701)
-    drop-shadow(-1px 1px 0 #507a31)
-    drop-shadow(1px 1px 0 #153d01);
+    drop-shadow(-0.5px -0.5px 0 #1ca938)
+    drop-shadow(0.5px -0.5px 0 #015701)
+    drop-shadow(-0.5px 0.5px 0 #507a31)
+    drop-shadow(0.5px 0.5px 0 #153d01);
 }
 /* Instagram Button */
 .numbered-contact-btn:nth-child(3):hover img,
 .numbered-contact-btn:nth-child(3):focus img {
   filter:
-    drop-shadow(-1px -1px 0 #E1306C)
-    drop-shadow(1px -1px 0 #F56040)
-    drop-shadow(-1px 1px 0 #833AB4)
-    drop-shadow(1px 1px 0 #f502f5);
+    drop-shadow(-0.5px -0.5px 0 #E1306C)
+    drop-shadow(0.5px -0.5px 0 #F56040)
+    drop-shadow(-0.5px 0.5px 0 #833AB4)
+    drop-shadow(0.5px 0.5px 0 #f502f5);
 }
 
 /* Mobile: adjust numbered contact buttons position */
