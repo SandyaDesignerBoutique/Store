@@ -1713,3 +1713,81 @@ body.dark-mode .carousel-box.improved-box {
     height: 200px;
   }
 }
+
+/* === Centered Numbered Contact Buttons === */
+.numbered-contact-buttons {
+    position: absolute;
+  left: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.numbered-contact-btn img {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: none;
+  background: none;
+  transition: filter 0.2s, transform 0.2s;
+  
+  /* Default shadow */
+  filter:
+    drop-shadow(-1px -1px 0 #444)
+    drop-shadow(1px -1px 0 #444)
+    drop-shadow(-1px 1px 0 #444)
+    drop-shadow(1px 1px 0 #444);
+}
+.numbered-contact-btn:hover img,
+.numbered-contact-btn:focus img {
+  transform: scale(1.08);
+  filter: none; /* clear default shadow */
+}
+/* Phone Button */
+.numbered-contact-btn:nth-child(1):hover img,
+.numbered-contact-btn:nth-child(1):focus img {
+  filter:
+    drop-shadow(-1px -1px 0 #002c99)
+    drop-shadow(1px -1px 0 #041d9a)
+    drop-shadow(-1px 1px 0 #007AFF)
+    drop-shadow(1px 1px 0 #1C1C1E);
+}
+/* WhatsApp Button */
+.numbered-contact-btn:nth-child(2):hover img,
+.numbered-contact-btn:nth-child(2):focus img {
+  filter:
+    drop-shadow(-1px -1px 0 #1ca938)
+    drop-shadow(1px -1px 0 #015701)
+    drop-shadow(-1px 1px 0 #507a31)
+    drop-shadow(1px 1px 0 #153d01);
+}
+/* Instagram Button */
+.numbered-contact-btn:nth-child(3):hover img,
+.numbered-contact-btn:nth-child(3):focus img {
+  filter:
+    drop-shadow(-1px -1px 0 #E1306C)
+    drop-shadow(1px -1px 0 #F56040)
+    drop-shadow(-1px 1px 0 #833AB4)
+    drop-shadow(1px 1px 0 #f502f5);
+}
+
+/* Mobile: adjust numbered contact buttons position */
+@media (max-width: 700px) {
+  .numbered-contact-buttons {
+    left: 36.6%;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .numbered-contact-btn img {
+    filter:
+    drop-shadow(-0.5px -0.5px 0 #444)
+    drop-shadow(0.5px -0.5px 0 #444)
+    drop-shadow(-0.5px 0.5px 0 #444)
+    drop-shadow(0.5px 0.5px 0 #444);
+    height: 30px;
+    width: 30px;
+  }
+}
